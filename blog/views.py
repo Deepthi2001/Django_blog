@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from .models import Post
 
 
+
 def home(request):   # home function
     context = {
         'posts': Post.objects.all()
@@ -65,8 +66,6 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):    #h
         if self.request.user == post.author:
             return True
         return False
-
-
 
 
 def about(request):

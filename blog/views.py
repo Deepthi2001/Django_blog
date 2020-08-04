@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 from .models import Post
 
 
+def title(request):
+    return render(request, 'blog/heading.html')
 
 def home(request):   # home function
     context = {

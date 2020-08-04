@@ -1,5 +1,5 @@
 {% load static %}
-<!DOCTYPE html>
+
 <html>
 <head>
 
@@ -56,30 +56,31 @@
             </div>
             {% endfor %}
             {% endif %}
-          {% block content %}{% endblock %}
-        </div>
-        <div class="col-md-4">
-          <div class="content-section">
-            <h3><center>Information</center></h3>
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-light">LinkedIn - <a href="https://www.linkedin.com/in/saideepthi-j/">LinkedIn Profile Link Here</a></li>
-                <li class="list-group-item list-group-item-light">Github - <a href="https://github.com/Deepthi2001">Github Profile Link Here</a></li>
-                  <li class="list-group-item list-group-item-light">Django Blog Project Link - <a href="https://github.com/Deepthi2001/Django_blog">Github Code Link Here</a></li>
-                 <li class="list-group-item list-group-item-light">Django Blog Project Video Link - <a href="https://github.com/Deepthi2001/Django_blog">Project Video Link Here</a></li>
-                <li class="list-group-item list-group-item-light">CryptoTracker Project Link - <a href="https://github.com/Deepthi2001/CryptoTracker">Github Code Link Here</a></li>
-                   <li class="list-group-item list-group-item-light">CryptoTracker Project Video Link - <a href="https://github.com/Deepthi2001/CryptoTracker">Project Video Link Here</a></li>
-                <li class="list-group-item list-group-item-light">etc</li>
-              </ul>
-            </p>
-          </div>
-        </div>
-      </div>
-    </main>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
-</html>
+        </div>
+          </div>
+    </main>
+{% block content %}
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-4">
+                <img src="{% static 'images/blog.jpg' %}" alt="Notes" class="rounded-lg shadow-sm" width="360" height="250">
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'images/blog2.jpg' %}" alt="Notes" class="rounded-lg shadow-sm" width="360" height="250">
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'images/blog3.jpg' %}" alt="Notes" class="rounded-lg shadow-sm" width="360" height="250">
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-10 offset-md-1">
+                <center><p class="h1 text-primary">Quick And Easy To Use, Anytime, Anywhere!</p></center>
+                <center><p class="h2 mt-3">"To blog = To share, To connect, To create"</p></center>
+                <center><p class="h5">Django Blog, Lets You Keep Track Of Your blogs In One Place.</p></center>
+
+                <center><a href="{% url 'blog-home' %}"><button type="button" class="btn btn-primary btn-lg mt-3 shadow">Let's Get Started</button></a></center>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

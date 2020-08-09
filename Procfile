@@ -1,1 +1,1 @@
-web: gunicorn posturarticle.wsgi --log-file -
+web: gunicorn postyourblog.wsgi --log-file -
